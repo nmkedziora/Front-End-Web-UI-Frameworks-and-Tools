@@ -63,3 +63,12 @@ address {
 	margin: 0px;
 	color: #0f0f0f;
 }
+
+.panel-primary .panel-heading {
+	background: #303F9F;
+	border-color: #1A237E;
+}
+
+.panel-primary .panel-body {
+	border-color: #1A237E;
+}
