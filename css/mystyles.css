@@ -72,3 +72,7 @@ address {
 .panel-primary .panel-body {
 	border-color: #1A237E;
 }
+
+.remember-me label {
+	color: #FFFFFF;
+}
