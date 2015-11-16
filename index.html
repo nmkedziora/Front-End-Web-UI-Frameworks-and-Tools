@@ -101,7 +101,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                 	<p style="padding:20px;"></p>
-                	<p><a class="btn btn-warning btn-lg" href="#" role="button">Reserve Table</a></p>
+                	<p><a class="btn btn-warning btn-lg" href="#reservation-form" role="button">Reserve Table</a></p>
                 </div>
             </div> <!-- row -->
         </div>
@@ -174,11 +174,12 @@
             </div>
             <div class="col-xs-12 col-sm-9">
 
-            <!-- Reserve form -->
-                <form class="form-horizontal" role="form">
+            <!-- Reservation form -->
+
+ 				<form class="form-horizontal" id="reservation-form" role="form">
                     <div class="form-group">
-                    	<label for="numberofguests" class=" col-xs-12 col-sm-2 control-label">Number of Guests</label>
-                    	<div class="radio col-xs-12 col-sm-10">
+                        <label for="Number of Guests" class="col-sm-2 control-label">Number of Guests</label>
+                        <div class="col-sm-10">
 							<label class="radio-inline">
 								<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
 							</label>
@@ -197,52 +198,37 @@
 							<label class="radio-inline">
 								<input type="radio" name="inlineRadioOptions" id="inlineRadio6" value="option6"> 6
 							</label>
-                    	</div> <!-- radio col-xs-12 col-sm-10 -->
+                        </div> <!-- col-sm-10 -->
                     </div> <!-- form-group -->
-
-                    <div class="form-group">
-                    	<label for="date" class="col-xs-12 col-sm-2 control-label">Date and Time</label>
-                    	<div class="col-xs-12 col-sm-4">
-							<div class="form-group">
-							    <input type="text" class="form-control" id="ReservationDate" aria-describedby="ReservationDate" placeholder="Date">
-							    <span class="glyphicon glyphicon-calendar form-control-feedback" aria-hidden="true"></span>
-							    <span id="inputSuccess4Status" class="sr-only">(success)</span>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-4 col-sm-offset-1">
-							<div class="form-group">
-							    <input type="text" class="form-control" id="ReservationTime" aria-describedby="ReservationTime" placeholder="Time">
-							    <span class="glyphicon glyphicon-time form-control-feedback" aria-hidden="true"></span>
-							    <span id="inputSuccess4Status" class="sr-only">(success)</span>
-							</div>
-						</div>
-					</div>
-
-                    <div class="form-group">
-                    	<label for="none" class=" col-xs-12 col-sm-2 control-label">&nbsp;</label>
-                    	<div class="col-xs-12 col-sm-10">
-							<button type="submit" class="btn btn-primary">Reserve</button>
-                    	</div> <!-- col-xs-12 col-sm-10 -->
-                    </div> <!-- form-group -->
-                </form>
-           </div> <!-- col-xs-12 col-sm-9 -->
-
-
-
-
-
                 
+                    <div class="form-group has-feedback">
+                        <label for="dateandtime" class="col-sm-2 control-label">Date and Time</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                            <i class="glyphicon glyphicon-calendar form-control-feedback"></i>
+                        </div>    
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                            <i class="glyphicon glyphicon-time form-control-feedback"></i>
+                        </div>
+                    </div> <!-- form-group -->
+                   
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Reserve</button>
+                        </div>
+                    </div> <!-- form-group -->
 
+                </form>
 
+                <!-- alert -->
+                <div class="alert alert-warning alert-dismissible" role="alert">
+  					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  					<strong>Warning:</strong> Please <a href="tel:+85212345678" class="alert-link">call</a> us to reserve for more than six guests.
+				</div>
 
-
-
-
-
-
-
-
-
+            </div> <!-- col-xs-12 col-sm-9 -->
+        </div> <!-- row -->
     </div> <!-- container -->
 
     <footer>
