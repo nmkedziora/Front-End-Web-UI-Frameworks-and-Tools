@@ -64,14 +64,14 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    <li><a href="#" id="loginBtn"><span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                 </ul>
             </div> <!-- navbar -->
         </div> <!-- container -->
     </nav>   
 
-    <!-- SignIn Modal -->
+    <!-- LogIn Modal -->
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal Content -->
@@ -205,7 +205,7 @@
                 <div class="col-xs-12 col-sm-2">
                 	<p style="padding:20px;"></p>
                 	<p>
-                        <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveModal" role="button">Reserve Table</a>
+                        <a id="reserveBtn" type="button" class="btn btn-warning btn-block" role="button">Reserve Table</a>
                     </p>
                 </div>
             </div> <!-- row -->
@@ -398,6 +398,24 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Toggles LogIn Modal -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#loginBtn").click(function(){
+                $("#loginModal").modal("toggle");
+            });
+        });
+    </script>
+
+    <!-- Toggles Reserve Modal -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#reserveBtn").click(function(){
+                $("#reserveModal").modal("toggle");
+            });
+        });
+    </script>
 
     <!-- Activate Carousel Play/ Pause Buttons -->
     <script type="text/javascript">
